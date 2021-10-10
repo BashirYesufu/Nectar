@@ -12,6 +12,8 @@
 		26466D3E2713905D00555418 /* onBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26466D3D2713905D00555418 /* onBoardingViewController.swift */; };
 		26466D432713905F00555418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26466D422713905F00555418 /* Assets.xcassets */; };
 		26466D462713905F00555418 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26466D442713905F00555418 /* LaunchScreen.storyboard */; };
+		26466D552713974B00555418 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26466D542713974B00555418 /* Extensions.swift */; };
+		26466D5827139D2700555418 /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26466D5727139D2700555418 /* Gilroy-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		26466D422713905F00555418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26466D452713905F00555418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26466D472713905F00555418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26466D542713974B00555418 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		26466D5727139D2700555418 /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +94,9 @@
 		26466D502713924100555418 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				26466D5627139CEA00555418 /* Fonts */,
 				26466D532713928B00555418 /* Delegates */,
+				26466D542713974B00555418 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -118,6 +124,14 @@
 				26466D3B2713905D00555418 /* SceneDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		26466D5627139CEA00555418 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				26466D5727139D2700555418 /* Gilroy-Medium.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26466D462713905F00555418 /* LaunchScreen.storyboard in Resources */,
+				26466D5827139D2700555418 /* Gilroy-Medium.ttf in Resources */,
 				26466D432713905F00555418 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +208,7 @@
 				26466D3E2713905D00555418 /* onBoardingViewController.swift in Sources */,
 				26466D3A2713905D00555418 /* AppDelegate.swift in Sources */,
 				26466D3C2713905D00555418 /* SceneDelegate.swift in Sources */,
+				26466D552713974B00555418 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
