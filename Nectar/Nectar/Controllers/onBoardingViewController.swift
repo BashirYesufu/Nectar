@@ -24,18 +24,24 @@ class OnBoardingViewController: UIViewController {
         button.titleLabel?.font = UIFont(name: AppFonts.gilroySemiBold.font, size: 18)
         button.setTitle("Get Started", for: .normal)
         button.backgroundColor = AppColors.green.color
+        button.addTarget(self, action: #selector(goToSocialSignUp), for: .touchUpInside)
         return button
     }()
+    @objc func goToSocialSignUp() {
+        let viewController = SocialSignUpViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+        navigationController?.navigationBar.isHidden = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         addSubviews()
         constraintViews()
     }
     
     // MARK: - Function...Adding subviews
     func addSubviews() {
+        view.backgroundColor = AppColors.white.color
         view.addSubview(background)
         view.addSubview(getStartedButton)
     }
