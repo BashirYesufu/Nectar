@@ -55,6 +55,7 @@ class OnBoardingViewController: UIViewController {
         button.addTarget(self, action: #selector(goToSocialSignUpScreen), for: .touchUpInside)
         return button
     }()
+    
     @objc func goToSocialSignUpScreen() {
         let viewController = SocialSignUpViewController()
         navigationController?.pushViewController(viewController, animated: true)
