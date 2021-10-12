@@ -15,6 +15,30 @@ class SocialSignUpViewController: UIViewController {
         imageView.image = UIImage(named: "Nectar Groceries")
         return imageView
     }()
+    
+    lazy var connectLabel: UILabel = {
+        var label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Or connect with social media"
+        label.font = UIFont(name: AppFonts.gilroySemiBold.font, size: 14)
+        label.textColor = UIColor(red: 0.51, green: 0.51, blue: 0.51, alpha: 1)
+        return label
+    }()
+    
+    lazy var numberTextField: UITextField = {
+        let textField = UITextField.makeBorderless()
+        textField.placeholder = "Phone number"
+        return textField
+    }()
+    
+    lazy var stroke: UIView = {
+        let lineView = UIView()
+        lineView.translatesAutoresizingMaskIntoConstraints = false
+        lineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        lineView.backgroundColor = UIColor(red: 0.51, green: 0.51, blue: 0.51, alpha: 1)
+        return lineView
+    }()
+    
     lazy var googleButton: UIButton = {
         let button = UIButton.makeCorneredButton()
         button.titleLabel?.font = UIFont(name: AppFonts.gilroySemiBold.font, size: 18)
@@ -40,17 +64,28 @@ class SocialSignUpViewController: UIViewController {
         view.addSubview(groceryImage)
         view.addSubview(facebookButton)
         view.addSubview(googleButton)
+        view.addSubview(connectLabel)
+        view.addSubview(stroke)
+        view.addSubview(numberTextField)
     }
     
     // MARK: - Function...Adding constraints to subviews
     func constraintViews() {
         NSLayoutConstraint.activate([
             facebookButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -90.84),
-            facebookButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30.5),
-            facebookButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -30.5),
+            facebookButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 25),
+            facebookButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -25),
             googleButton.bottomAnchor.constraint(equalTo: facebookButton.topAnchor, constant: -20),
-            googleButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30.5),
-            googleButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -30.5)
+            googleButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 25),
+            googleButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -25),
+            connectLabel.bottomAnchor.constraint(equalTo: googleButton.topAnchor, constant: -37.8),
+            connectLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stroke.bottomAnchor.constraint(equalTo: connectLabel.topAnchor, constant: -40),
+            stroke.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15),
+            stroke.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15),
+            numberTextField.bottomAnchor.constraint(equalTo: stroke.topAnchor),
+            numberTextField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15),
+            numberTextField.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15)
         ])
    }
 }
