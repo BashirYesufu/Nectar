@@ -7,7 +7,7 @@
 
 import UIKit
 
-class onBoardingViewController: UIViewController {
+class OnBoardingViewController: UIViewController {
     
     lazy var background: UIImageView = {
         var imageView = UIImageView()
