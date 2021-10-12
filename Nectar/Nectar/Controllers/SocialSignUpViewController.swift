@@ -8,6 +8,7 @@
 import UIKit
 
 class SocialSignUpViewController: UIViewController {
+    
     lazy var groceryImage: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -28,8 +29,15 @@ class SocialSignUpViewController: UIViewController {
     lazy var numberTextField: UITextField = {
         let textField = UITextField.makeBorderless()
         textField.placeholder = "Phone number"
+        textField.addTarget(self, action: #selector(goToMobileNumberScreen), for: .editingDidBegin)
         return textField
     }()
+    
+    @objc func goToMobileNumberScreen( _ textField: UITextField) {
+        let viewController = MobileNumberViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+        numberTextField.resignFirstResponder()
+    }
     
     lazy var stroke: UIView = {
         let lineView = UIView()
@@ -37,6 +45,17 @@ class SocialSignUpViewController: UIViewController {
         lineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
         lineView.backgroundColor = UIColor(red: 0.51, green: 0.51, blue: 0.51, alpha: 1)
         return lineView
+    }()
+    
+    lazy var advertLabel: UILabel = {
+        var label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Get your groceries \nwith nectar"
+        label.numberOfLines = 2
+        label.textAlignment = .left
+        label.font = UIFont(name: AppFonts.gilroySemiBold.font, size: 26)
+        label.textColor = UIColor(red: 0.012, green: 0.012, blue: 0.012, alpha: 1)
+        return label
     }()
     
     lazy var googleButton: UIButton = {
@@ -67,6 +86,7 @@ class SocialSignUpViewController: UIViewController {
         view.addSubview(connectLabel)
         view.addSubview(stroke)
         view.addSubview(numberTextField)
+        view.addSubview(advertLabel)
     }
     
     // MARK: - Function...Adding constraints to subviews
@@ -85,7 +105,9 @@ class SocialSignUpViewController: UIViewController {
             stroke.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15),
             numberTextField.bottomAnchor.constraint(equalTo: stroke.topAnchor),
             numberTextField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15),
-            numberTextField.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15)
+            numberTextField.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15),
+            advertLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 25),
+            advertLabel.bottomAnchor.constraint(equalTo: numberTextField.topAnchor, constant: -30.61)
         ])
    }
 }

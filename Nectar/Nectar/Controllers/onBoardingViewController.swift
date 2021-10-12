@@ -52,10 +52,10 @@ class OnBoardingViewController: UIViewController {
         button.titleLabel?.font = UIFont(name: AppFonts.gilroySemiBold.font, size: 18)
         button.setTitle("Get Started", for: .normal)
         button.backgroundColor = AppColors.green.color
-        button.addTarget(self, action: #selector(goToSocialSignUp), for: .touchUpInside)
+        button.addTarget(self, action: #selector(goToSocialSignUpScreen), for: .touchUpInside)
         return button
     }()
-    @objc func goToSocialSignUp() {
+    @objc func goToSocialSignUpScreen() {
         let viewController = SocialSignUpViewController()
         navigationController?.pushViewController(viewController, animated: true)
         navigationController?.navigationBar.isHidden = true
