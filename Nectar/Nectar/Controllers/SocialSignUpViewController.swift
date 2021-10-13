@@ -87,8 +87,8 @@ class SocialSignUpViewController: UIViewController {
             connectLabel.bottomAnchor.constraint(equalTo: googleButton.topAnchor, constant: -37.8),
             connectLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             numberTextField.bottomAnchor.constraint(equalTo: connectLabel.topAnchor, constant: -40),
-            numberTextField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15),
-            numberTextField.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15),
+            numberTextField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 25),
+            numberTextField.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -25),
             advertLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 25),
             advertLabel.bottomAnchor.constraint(equalTo: numberTextField.topAnchor, constant: -30.61)
         ])

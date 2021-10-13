@@ -34,8 +34,6 @@ extension UITextField {
         stroke.backgroundColor = UIColor(red: 0.51, green: 0.51, blue: 0.51, alpha: 1)
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-        textField.leftViewMode = .always
         textField.backgroundColor = .white
         textField.font = UIFont(name: AppFonts.gilroyMedium.font, size: 18)
         textField.heightAnchor.constraint(equalToConstant: 50).isActive = true
