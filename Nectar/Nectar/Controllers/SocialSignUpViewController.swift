@@ -28,7 +28,7 @@ class SocialSignUpViewController: UIViewController {
     
     lazy var numberTextField: UITextField = {
         let textField = UITextField.makeBorderless()
-        textField.placeholder = "Phone number"
+        textField.placeholder = "Mobile number"
         textField.addTarget(self, action: #selector(goToMobileNumberScreen), for: .editingDidBegin)
         return textField
     }()
@@ -36,6 +36,7 @@ class SocialSignUpViewController: UIViewController {
     @objc func goToMobileNumberScreen( _ textField: UITextField) {
         let viewController = MobileNumberViewController()
         navigationController?.pushViewController(viewController, animated: true)
+        navigationController?.setNavigationBarHidden(true, animated: false)
         numberTextField.resignFirstResponder()
     }
     

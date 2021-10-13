@@ -15,6 +15,14 @@ extension UIButton {
         button.layer.cornerRadius = 19
         return button
     }
+    class func makeBackButton() -> UIButton {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(named: "Back Button"), for: .normal)
+        button.heightAnchor.constraint(equalToConstant: 18).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 10).isActive = true
+        return button
+    }
 }
 extension UITextField {
     class func makeBorderless() -> UITextField {
