@@ -38,6 +38,7 @@ class SocialSignUpViewController: UIViewController {
         navigationController?.pushViewController(viewController, animated: true)
         navigationController?.setNavigationBarHidden(true, animated: false)
         numberTextField.resignFirstResponder()
+        viewController.numberTextField.becomeFirstResponder()
     }
     
     lazy var advertLabel: UILabel = {

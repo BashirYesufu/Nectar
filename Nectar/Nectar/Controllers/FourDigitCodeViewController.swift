@@ -1,14 +1,13 @@
 //
-//  MobileNumberViewController.swift
+//  FourDigitCodeViewController.swift
 //  Nectar
 //
-//  Created by Decagon Macbook Pro on 12/10/2021.
+//  Created by Decagon Macbook Pro on 14/10/2021.
 //
 
 import UIKit
 
-class MobileNumberViewController: UIViewController {
-
+class FourDigitCodeViewController: UIViewController {
     // MARK: - Button... Creating the back button
     lazy var backButton: UIButton = {
         let button = UIButton.makeBackButton()
@@ -21,19 +20,19 @@ class MobileNumberViewController: UIViewController {
     // MARK: - Label... Creating the header
     lazy var headerLabel: UILabel = {
         var label = UILabel.makeHeaderLabel()
-        label.text = "Enter your mobile number"
+        label.text = "Enter your 4-digit code"
         return label
     }()
     // MARK: - Label... Creating the mobile number label
     lazy var mobileNumberLabel: UILabel = {
         var label = UILabel.makeTagLabel()
-        label.text = "Mobile Number"
+        label.text = "Code"
         return label
     }()
     // MARK: - TextField... Creating the number textField
     lazy var numberTextField: UITextField = {
         let textField = UITextField.makeBorderless()
-        textField.placeholder = "Mobile number"
+        textField.placeholder = "----"
         textField.keyboardType = .phonePad
         return textField
     }()
@@ -46,13 +45,16 @@ class MobileNumberViewController: UIViewController {
         button.layer.cornerRadius = 33.5
         button.setImage(UIImage(named: "Go Forward"), for: .normal)
         button.backgroundColor = AppColors.green.color
-        button.addTarget(self, action: #selector(goToFourDigitScreen), for: .touchUpInside)
         return button
     }()
-    @objc func goToFourDigitScreen() {
-        let fourDigitScreen = FourDigitCodeViewController()
-        navigationController?.pushViewController(fourDigitScreen, animated: true)
-    }
+    lazy var resendCodeLabel: UILabel = {
+        var label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = AppColors.green.color
+        label.font = UIFont(name: AppFonts.gilroyMedium.font, size: 18)
+        label.text = "Resend Code"
+        return label
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
@@ -67,6 +69,7 @@ class MobileNumberViewController: UIViewController {
                 if self.view.frame.origin.y == 0 {
                     let keyboardSize = keyboardSize.height + 20
                     self.proceedButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -keyboardSize).isActive = true
+                    self.resendCodeLabel.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -keyboardSize).isActive = true
                 } else {
                     self.proceedButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -90.84).isActive = true
                 }
@@ -87,6 +90,7 @@ class MobileNumberViewController: UIViewController {
         view.addSubview(mobileNumberLabel)
         view.addSubview(numberTextField)
         view.addSubview(proceedButton)
+        view.addSubview(resendCodeLabel)
     }
     // MARK: - Method... Adding constraints
     private func addConstraints() {
@@ -101,7 +105,9 @@ class MobileNumberViewController: UIViewController {
             numberTextField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 25),
             numberTextField.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -25),
             proceedButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -25),
-            proceedButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -90)
+            proceedButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -90),
+            resendCodeLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 25),
+            resendCodeLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -90)
         ])
     }
 }

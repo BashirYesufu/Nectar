@@ -18,6 +18,7 @@
 		26466D5C2713A75200555418 /* Gilroy-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26466D5B2713A75200555418 /* Gilroy-SemiBold.ttf */; };
 		26466D7327150F8500555418 /* SocialSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26466D7227150F8500555418 /* SocialSignUpViewController.swift */; };
 		26466D75271571C200555418 /* MobileNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26466D74271571C200555418 /* MobileNumberViewController.swift */; };
+		268A589D27179F5000EB22E5 /* FourDigitCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A589C27179F5000EB22E5 /* FourDigitCodeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		26466D5B2713A75200555418 /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
 		26466D7227150F8500555418 /* SocialSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialSignUpViewController.swift; sourceTree = "<group>"; };
 		26466D74271571C200555418 /* MobileNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNumberViewController.swift; sourceTree = "<group>"; };
+		268A589C27179F5000EB22E5 /* FourDigitCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourDigitCodeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				26466D3D2713905D00555418 /* OnBoardingViewController.swift */,
 				26466D7227150F8500555418 /* SocialSignUpViewController.swift */,
 				26466D74271571C200555418 /* MobileNumberViewController.swift */,
+				268A589C27179F5000EB22E5 /* FourDigitCodeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26466D5A2713A4BE00555418 /* Extensions.swift in Sources */,
+				268A589D27179F5000EB22E5 /* FourDigitCodeViewController.swift in Sources */,
 				26466D3E2713905D00555418 /* OnBoardingViewController.swift in Sources */,
 				26466D3A2713905D00555418 /* AppDelegate.swift in Sources */,
 				26466D3C2713905D00555418 /* SceneDelegate.swift in Sources */,
