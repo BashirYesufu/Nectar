@@ -24,6 +24,12 @@ class MobileNumberViewController: UIViewController {
         return label
     }()
     
+    lazy var mobileNumberLabel: UILabel = {
+        var label = UILabel.makeTagLabel()
+        label.text = "Mobile Number"
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
@@ -34,6 +40,7 @@ class MobileNumberViewController: UIViewController {
         view.backgroundColor = .white
         view.addSubview(backButton)
         view.addSubview(headerLabel)
+        view.addSubview(mobileNumberLabel)
     }
     
     private func addConstraints() {
@@ -42,6 +49,8 @@ class MobileNumberViewController: UIViewController {
             backButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 25),
             headerLabel.topAnchor.constraint(equalTo: backButton.bottomAnchor, constant: 65),
             headerLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 25),
+            mobileNumberLabel.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 28),
+            mobileNumberLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 25)
         ])
     }
 }

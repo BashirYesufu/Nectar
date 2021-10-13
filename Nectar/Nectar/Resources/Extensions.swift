@@ -56,4 +56,12 @@ extension UILabel {
         label.textColor = UIColor(red: 0.012, green: 0.012, blue: 0.012, alpha: 1)
         return label
     }
+    
+    class func makeTagLabel() -> UILabel {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = UIColor(red: 0.486, green: 0.486, blue: 0.486, alpha: 1)
+        label.font = UIFont(name: AppFonts.gilroySemiBold.font, size: 16)
+        return label
+    }
 }
