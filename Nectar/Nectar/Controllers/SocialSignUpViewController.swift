@@ -40,35 +40,21 @@ class SocialSignUpViewController: UIViewController {
         numberTextField.resignFirstResponder()
     }
     
-    lazy var stroke: UIView = {
-        let lineView = UIView()
-        lineView.translatesAutoresizingMaskIntoConstraints = false
-        lineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        lineView.backgroundColor = UIColor(red: 0.51, green: 0.51, blue: 0.51, alpha: 1)
-        return lineView
-    }()
-    
     lazy var advertLabel: UILabel = {
-        var label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
+        var label = UILabel.makeHeaderLabel()
         label.text = "Get your groceries \nwith nectar"
         label.numberOfLines = 2
-        label.textAlignment = .left
-        label.font = UIFont(name: AppFonts.gilroySemiBold.font, size: 26)
-        label.textColor = UIColor(red: 0.012, green: 0.012, blue: 0.012, alpha: 1)
         return label
     }()
     
     lazy var googleButton: UIButton = {
         let button = UIButton.makeCorneredButton()
-        button.titleLabel?.font = UIFont(name: AppFonts.gilroySemiBold.font, size: 18)
         button.setTitle("Continue with Google", for: .normal)
         button.backgroundColor = AppColors.lightBlue.color
         return button
     }()
     lazy var facebookButton: UIButton = {
         let button = UIButton.makeCorneredButton()
-        button.titleLabel?.font = UIFont(name: AppFonts.gilroySemiBold.font, size: 18)
         button.setTitle("Continue with Facebook", for: .normal)
         button.backgroundColor = AppColors.darkBlue.color
         return button
@@ -85,7 +71,6 @@ class SocialSignUpViewController: UIViewController {
         view.addSubview(facebookButton)
         view.addSubview(googleButton)
         view.addSubview(connectLabel)
-        view.addSubview(stroke)
         view.addSubview(numberTextField)
         view.addSubview(advertLabel)
     }
@@ -101,10 +86,7 @@ class SocialSignUpViewController: UIViewController {
             googleButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -25),
             connectLabel.bottomAnchor.constraint(equalTo: googleButton.topAnchor, constant: -37.8),
             connectLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            stroke.bottomAnchor.constraint(equalTo: connectLabel.topAnchor, constant: -40),
-            stroke.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15),
-            stroke.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15),
-            numberTextField.bottomAnchor.constraint(equalTo: stroke.topAnchor),
+            numberTextField.bottomAnchor.constraint(equalTo: connectLabel.topAnchor, constant: -40),
             numberTextField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15),
             numberTextField.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15),
             advertLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 25),

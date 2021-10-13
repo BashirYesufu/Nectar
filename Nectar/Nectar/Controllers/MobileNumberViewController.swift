@@ -18,13 +18,30 @@ class MobileNumberViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    lazy var headerLabel: UILabel = {
+        var label = UILabel.makeHeaderLabel()
+        label.text = "Enter your mobile number"
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        view.addSubview(backButton)
-        backButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 56.83).isActive = true
-        backButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 25).isActive = true
-        
+        addSubviews()
+        addConstraints()
     }
   
+    private func addSubviews() {
+        view.backgroundColor = .white
+        view.addSubview(backButton)
+        view.addSubview(headerLabel)
+    }
+    
+    private func addConstraints() {
+        NSLayoutConstraint.activate([
+            backButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 56.83),
+            backButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 25),
+            headerLabel.topAnchor.constraint(equalTo: backButton.bottomAnchor, constant: 65),
+            headerLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 25),
+        ])
+    }
 }
