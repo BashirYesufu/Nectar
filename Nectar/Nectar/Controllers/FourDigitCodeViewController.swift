@@ -47,13 +47,14 @@ class FourDigitCodeViewController: UIViewController {
         button.backgroundColor = AppColors.green.color
         return button
     }()
-    lazy var resendCodeLabel: UILabel = {
-        var label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = AppColors.green.color
-        label.font = UIFont(name: AppFonts.gilroyMedium.font, size: 18)
-        label.text = "Resend Code"
-        return label
+    // MARK: - Button... Creating the resend code button
+    lazy var resendCodeLabel: UIButton = {
+        var button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitleColor(AppColors.green.color, for: .normal)
+        button.setTitle("Resend Code", for: .normal)
+        button.titleLabel?.font = UIFont(name: AppFonts.gilroyMedium.font, size: 18)
+        return button
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,7 +108,7 @@ class FourDigitCodeViewController: UIViewController {
             proceedButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -25),
             proceedButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -90),
             resendCodeLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 25),
-            resendCodeLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -90)
+            resendCodeLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -110)
         ])
     }
 }

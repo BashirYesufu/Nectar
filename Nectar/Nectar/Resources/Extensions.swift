@@ -13,6 +13,7 @@ extension UIButton {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.heightAnchor.constraint(equalToConstant: 67).isActive = true
         button.titleLabel?.font = UIFont(name: AppFonts.gilroySemiBold.font, size: 18)
+        button.backgroundColor = AppColors.green.color
         button.layer.cornerRadius = 19
         return button
     }
@@ -35,6 +36,7 @@ extension UITextField {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.backgroundColor = .white
+        textField.autocorrectionType = .no
         textField.font = UIFont(name: AppFonts.gilroyMedium.font, size: 18)
         textField.heightAnchor.constraint(equalToConstant: 50).isActive = true
         textField.addSubview(stroke)
