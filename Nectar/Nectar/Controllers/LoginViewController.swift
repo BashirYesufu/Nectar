@@ -103,6 +103,7 @@ class LoginViewController: UIViewController {
     @objc func goToSignUpScreen() {
         let signUpScreen = SignUpViewController()
         navigationController?.pushViewController(signUpScreen, animated: true)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     // MARK: - Stack... Creating the stack
     lazy var bottomStack: UIStackView = {
