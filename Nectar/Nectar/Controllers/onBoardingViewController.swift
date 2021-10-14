@@ -9,6 +9,7 @@ import UIKit
 
 class OnBoardingViewController: UIViewController {
 
+    // MARK: - ImageView... Creating the logo
     lazy var logo: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -17,6 +18,7 @@ class OnBoardingViewController: UIViewController {
         return imageView
     }()
     
+    // MARK: - ImageView... Creating the background
     lazy var background: UIImageView = {
         var imageView = UIImageView()
         imageView.frame = view.bounds
@@ -27,6 +29,7 @@ class OnBoardingViewController: UIViewController {
         return imageView
     }()
 
+    // MARK: - Label... Creating the welcome label
     lazy var welcomeLabel: UILabel = {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -38,6 +41,7 @@ class OnBoardingViewController: UIViewController {
         return label
     }()
     
+    // MARK: - Label... Creating the welcome description label
     lazy var descriptionLabel: UILabel = {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -47,11 +51,10 @@ class OnBoardingViewController: UIViewController {
         return label
     }()
 
+    // MARK: - Button... Creating the get started button
     lazy var getStartedButton: UIButton = {
         let button = UIButton.makeCorneredButton()
-        button.titleLabel?.font = UIFont(name: AppFonts.gilroySemiBold.font, size: 18)
         button.setTitle("Get Started", for: .normal)
-        button.backgroundColor = AppColors.green.color
         button.addTarget(self, action: #selector(goToSocialSignUpScreen), for: .touchUpInside)
         return button
     }()
