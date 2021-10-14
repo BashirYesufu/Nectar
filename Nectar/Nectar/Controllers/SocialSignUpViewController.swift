@@ -9,6 +9,7 @@ import UIKit
 
 class SocialSignUpViewController: UIViewController {
     
+    // MARK: - ImageView... Creating the grocery image view
     lazy var groceryImage: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -17,6 +18,7 @@ class SocialSignUpViewController: UIViewController {
         return imageView
     }()
     
+    // MARK: - Label... Creating the alternative connection label
     lazy var connectLabel: UILabel = {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -26,6 +28,7 @@ class SocialSignUpViewController: UIViewController {
         return label
     }()
     
+    // MARK: - TextField... Creating the number textField
     lazy var numberTextField: UITextField = {
         let textField = UITextField.makeBorderless()
         textField.placeholder = "Mobile number"
@@ -41,6 +44,7 @@ class SocialSignUpViewController: UIViewController {
         viewController.numberTextField.becomeFirstResponder()
     }
     
+    // MARK: - Label... Creating the advert label
     lazy var advertLabel: UILabel = {
         var label = UILabel.makeHeaderLabel()
         label.text = "Get your groceries \nwith nectar"
@@ -48,12 +52,15 @@ class SocialSignUpViewController: UIViewController {
         return label
     }()
     
+    // MARK: - Button... Creating the google button
     lazy var googleButton: UIButton = {
         let button = UIButton.makeCorneredButton()
         button.setTitle("Continue with Google", for: .normal)
         button.backgroundColor = AppColors.lightBlue.color
         return button
     }()
+    
+    // MARK: - Button... Creating the facebook button
     lazy var facebookButton: UIButton = {
         let button = UIButton.makeCorneredButton()
         button.setTitle("Continue with Facebook", for: .normal)
