@@ -32,11 +32,12 @@ extension UITextField {
         let stroke = UIView()
         stroke.translatesAutoresizingMaskIntoConstraints = false
         stroke.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        stroke.backgroundColor = UIColor(red: 0.51, green: 0.51, blue: 0.51, alpha: 1)
+        stroke.backgroundColor = AppColors.grey.color
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.backgroundColor = .white
+        textField.backgroundColor = AppColors.white.color
         textField.autocorrectionType = .no
+        textField.autocapitalizationType = .none
         textField.font = UIFont(name: AppFonts.gilroyMedium.font, size: 18)
         textField.heightAnchor.constraint(equalToConstant: 50).isActive = true
         textField.addSubview(stroke)
@@ -53,14 +54,14 @@ extension UILabel {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .left
         label.font = UIFont(name: AppFonts.gilroySemiBold.font, size: 26)
-        label.textColor = UIColor(red: 0.012, green: 0.012, blue: 0.012, alpha: 1)
+        label.textColor = AppColors.header.color
         return label
     }
     
     class func makeTagLabel() -> UILabel {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = UIColor(red: 0.486, green: 0.486, blue: 0.486, alpha: 1)
+        label.textColor = AppColors.tag.color
         label.font = UIFont(name: AppFonts.gilroySemiBold.font, size: 16)
         return label
     }

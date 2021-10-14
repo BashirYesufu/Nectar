@@ -67,6 +67,7 @@ class SocialSignUpViewController: UIViewController {
         button.backgroundColor = AppColors.darkBlue.color
         return button
     }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()

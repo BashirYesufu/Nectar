@@ -12,6 +12,10 @@ enum AppColors {
     case green
     case lightBlue
     case darkBlue
+    case ash
+    case grey
+    case header
+    case tag
     
     var color: UIColor {
         switch self {
@@ -23,6 +27,14 @@ enum AppColors {
             return UIColor(red: 0.325, green: 0.514, blue: 0.925, alpha: 1)
         case .darkBlue:
             return UIColor(red: 0.29, green: 0.4, blue: 0.675, alpha: 1)
+        case .ash:
+            return UIColor(red: 0.988, green: 0.988, blue: 0.988, alpha: 0.7)
+        case .grey:
+            return UIColor(red: 0.51, green: 0.51, blue: 0.51, alpha: 1)
+        case .header:
+            return UIColor(red: 0.012, green: 0.012, blue: 0.012, alpha: 1)
+        case .tag:
+            return UIColor(red: 0.486, green: 0.486, blue: 0.486, alpha: 1)
         }
     }
 }

@@ -20,6 +20,8 @@
 		26466D75271571C200555418 /* MobileNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26466D74271571C200555418 /* MobileNumberViewController.swift */; };
 		268A589D27179F5000EB22E5 /* FourDigitCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A589C27179F5000EB22E5 /* FourDigitCodeViewController.swift */; };
 		268A589F2717A59100EB22E5 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A589E2717A59100EB22E5 /* LocationViewController.swift */; };
+		268A58A12718D3DD00EB22E5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A58A02718D3DD00EB22E5 /* LoginViewController.swift */; };
+		268A58A32718E2CC00EB22E5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A58A22718E2CC00EB22E5 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		26466D74271571C200555418 /* MobileNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNumberViewController.swift; sourceTree = "<group>"; };
 		268A589C27179F5000EB22E5 /* FourDigitCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourDigitCodeViewController.swift; sourceTree = "<group>"; };
 		268A589E2717A59100EB22E5 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		268A58A02718D3DD00EB22E5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		268A58A22718E2CC00EB22E5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 				26466D74271571C200555418 /* MobileNumberViewController.swift */,
 				268A589C27179F5000EB22E5 /* FourDigitCodeViewController.swift */,
 				268A589E2717A59100EB22E5 /* LocationViewController.swift */,
+				268A58A02718D3DD00EB22E5 /* LoginViewController.swift */,
+				268A58A22718E2CC00EB22E5 /* SignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -224,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268A58A32718E2CC00EB22E5 /* SignUpViewController.swift in Sources */,
 				26466D5A2713A4BE00555418 /* Extensions.swift in Sources */,
 				268A589D27179F5000EB22E5 /* FourDigitCodeViewController.swift in Sources */,
 				26466D3E2713905D00555418 /* OnBoardingViewController.swift in Sources */,
@@ -232,6 +239,7 @@
 				26466D552713974B00555418 /* Enumerations.swift in Sources */,
 				268A589F2717A59100EB22E5 /* LocationViewController.swift in Sources */,
 				26466D7327150F8500555418 /* SocialSignUpViewController.swift in Sources */,
+				268A58A12718D3DD00EB22E5 /* LoginViewController.swift in Sources */,
 				26466D75271571C200555418 /* MobileNumberViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
