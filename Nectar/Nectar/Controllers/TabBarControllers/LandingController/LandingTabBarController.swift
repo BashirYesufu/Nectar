@@ -29,6 +29,7 @@ class LandingTabBarController: UITabBarController {
         for item in 0 ... 4 {
             items[item].image = UIImage(named: imageName[item])
         }
+        self.tabBar.layer.cornerRadius = 15
         self.tabBar.backgroundColor = .white
         self.tabBar.tintColor = AppColors.green.color
     }
