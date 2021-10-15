@@ -22,6 +22,12 @@
 		268A589F2717A59100EB22E5 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A589E2717A59100EB22E5 /* LocationViewController.swift */; };
 		268A58A12718D3DD00EB22E5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A58A02718D3DD00EB22E5 /* LoginViewController.swift */; };
 		268A58A32718E2CC00EB22E5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A58A22718E2CC00EB22E5 /* SignUpViewController.swift */; };
+		268A58A72718F4E200EB22E5 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A58A62718F4E200EB22E5 /* ShopViewController.swift */; };
+		268A58A92718F4F100EB22E5 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A58A82718F4F100EB22E5 /* ExploreViewController.swift */; };
+		268A58AB2718F50100EB22E5 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A58AA2718F50100EB22E5 /* CartViewController.swift */; };
+		268A58AD2718F51900EB22E5 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A58AC2718F51900EB22E5 /* FavouriteViewController.swift */; };
+		268A58AF2718F52700EB22E5 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A58AE2718F52700EB22E5 /* AccountViewController.swift */; };
+		268A58B12718F5E200EB22E5 /* LandingTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A58B02718F5E200EB22E5 /* LandingTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +48,12 @@
 		268A589E2717A59100EB22E5 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		268A58A02718D3DD00EB22E5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		268A58A22718E2CC00EB22E5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		268A58A62718F4E200EB22E5 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		268A58A82718F4F100EB22E5 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		268A58AA2718F50100EB22E5 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		268A58AC2718F51900EB22E5 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
+		268A58AE2718F52700EB22E5 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		268A58B02718F5E200EB22E5 /* LandingTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,13 +133,8 @@
 		26466D512713924E00555418 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				26466D3D2713905D00555418 /* OnBoardingViewController.swift */,
-				26466D7227150F8500555418 /* SocialSignUpViewController.swift */,
-				26466D74271571C200555418 /* MobileNumberViewController.swift */,
-				268A589C27179F5000EB22E5 /* FourDigitCodeViewController.swift */,
-				268A589E2717A59100EB22E5 /* LocationViewController.swift */,
-				268A58A02718D3DD00EB22E5 /* LoginViewController.swift */,
-				268A58A22718E2CC00EB22E5 /* SignUpViewController.swift */,
+				268A58A52718F4C400EB22E5 /* TabBarControllers */,
+				268A58A42718F49A00EB22E5 /* AccessFlow */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -156,6 +163,41 @@
 				26466D5B2713A75200555418 /* Gilroy-SemiBold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		268A58A42718F49A00EB22E5 /* AccessFlow */ = {
+			isa = PBXGroup;
+			children = (
+				26466D3D2713905D00555418 /* OnBoardingViewController.swift */,
+				26466D7227150F8500555418 /* SocialSignUpViewController.swift */,
+				26466D74271571C200555418 /* MobileNumberViewController.swift */,
+				268A589C27179F5000EB22E5 /* FourDigitCodeViewController.swift */,
+				268A589E2717A59100EB22E5 /* LocationViewController.swift */,
+				268A58A02718D3DD00EB22E5 /* LoginViewController.swift */,
+				268A58A22718E2CC00EB22E5 /* SignUpViewController.swift */,
+			);
+			path = AccessFlow;
+			sourceTree = "<group>";
+		};
+		268A58A52718F4C400EB22E5 /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				268A58B22718F5FB00EB22E5 /* LandingController */,
+				268A58A62718F4E200EB22E5 /* ShopViewController.swift */,
+				268A58A82718F4F100EB22E5 /* ExploreViewController.swift */,
+				268A58AA2718F50100EB22E5 /* CartViewController.swift */,
+				268A58AC2718F51900EB22E5 /* FavouriteViewController.swift */,
+				268A58AE2718F52700EB22E5 /* AccountViewController.swift */,
+			);
+			path = TabBarControllers;
+			sourceTree = "<group>";
+		};
+		268A58B22718F5FB00EB22E5 /* LandingController */ = {
+			isa = PBXGroup;
+			children = (
+				268A58B02718F5E200EB22E5 /* LandingTabBarController.swift */,
+			);
+			path = LandingController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,16 +272,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268A58B12718F5E200EB22E5 /* LandingTabBarController.swift in Sources */,
 				268A58A32718E2CC00EB22E5 /* SignUpViewController.swift in Sources */,
 				26466D5A2713A4BE00555418 /* Extensions.swift in Sources */,
+				268A58AF2718F52700EB22E5 /* AccountViewController.swift in Sources */,
+				268A58AB2718F50100EB22E5 /* CartViewController.swift in Sources */,
 				268A589D27179F5000EB22E5 /* FourDigitCodeViewController.swift in Sources */,
 				26466D3E2713905D00555418 /* OnBoardingViewController.swift in Sources */,
 				26466D3A2713905D00555418 /* AppDelegate.swift in Sources */,
 				26466D3C2713905D00555418 /* SceneDelegate.swift in Sources */,
 				26466D552713974B00555418 /* Enumerations.swift in Sources */,
 				268A589F2717A59100EB22E5 /* LocationViewController.swift in Sources */,
+				268A58A72718F4E200EB22E5 /* ShopViewController.swift in Sources */,
 				26466D7327150F8500555418 /* SocialSignUpViewController.swift in Sources */,
+				268A58A92718F4F100EB22E5 /* ExploreViewController.swift in Sources */,
 				268A58A12718D3DD00EB22E5 /* LoginViewController.swift in Sources */,
+				268A58AD2718F51900EB22E5 /* FavouriteViewController.swift in Sources */,
 				26466D75271571C200555418 /* MobileNumberViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
