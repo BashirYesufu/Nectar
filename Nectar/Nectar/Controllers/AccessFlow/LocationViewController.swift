@@ -24,7 +24,7 @@ class LocationViewController: UIViewController {
         return textField
     }()
     
-    // MARK: - Label... Creating the mobile number label
+    // MARK: - Label... Creating the street label
     lazy var yourStreetLabel: UILabel = {
         var label = UILabel.makeTagLabel()
         label.text = "Your Street"
@@ -39,7 +39,7 @@ class LocationViewController: UIViewController {
         return textField
     }()
     
-    // MARK: - Label... Creating the mobile number label
+    // MARK: - Label... Creating the city label
     lazy var yourCityLabel: UILabel = {
         var label = UILabel.makeTagLabel()
         label.text = "Your City"

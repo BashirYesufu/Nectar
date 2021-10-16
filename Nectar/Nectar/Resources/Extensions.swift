@@ -25,6 +25,14 @@ extension UIButton {
         button.widthAnchor.constraint(equalToConstant: 10).isActive = true
         return button
     }
+    class func makeSeeAll() -> UIButton {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("See all", for: .normal)
+        button.setTitleColor(AppColors.green.color, for: .normal)
+        button.titleLabel?.font = UIFont(name: AppFonts.gilroySemiBold.font, size: 16)
+        return button
+    }
 }
 
 extension UITextField {
@@ -63,6 +71,14 @@ extension UILabel {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = AppColors.tag.color
         label.font = UIFont(name: AppFonts.gilroySemiBold.font, size: 16)
+        return label
+    }
+    
+    class func makeCollectionViewTag() -> UILabel {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = UIColor(red: 0.094, green: 0.09, blue: 0.145, alpha: 1)
+        label.font = UIFont(name: AppFonts.gilroySemiBold.font, size: 24)
         return label
     }
 }
