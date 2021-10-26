@@ -16,11 +16,13 @@ enum AppColors {
     case grey
     case header
     case tag
+    case searchField
+    case black
     
     var color: UIColor {
         switch self {
         case .white:
-            return UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+            return .white
         case .green:
             return UIColor(red: 0.325, green: 0.694, blue: 0.459, alpha: 1)
         case .lightBlue:
@@ -35,6 +37,10 @@ enum AppColors {
             return UIColor(red: 0.012, green: 0.012, blue: 0.012, alpha: 1)
         case .tag:
             return UIColor(red: 0.486, green: 0.486, blue: 0.486, alpha: 1)
+        case .searchField:
+            return UIColor(red: 0.948, green: 0.952, blue: 0.95, alpha: 1)
+        case .black:
+            return .black
         }
     }
 }
@@ -42,6 +48,7 @@ enum AppColors {
 enum AppFonts {
     case gilroyMedium
     case gilroySemiBold
+    case gilroyBold
     
     var font: String {
         switch self {
@@ -49,6 +56,8 @@ enum AppFonts {
             return "Gilroy-Medium"
         case .gilroySemiBold:
             return "Gilroy-SemiBold"
+        case .gilroyBold:
+            return "Gilroy-Bold"
         }
     }
 }

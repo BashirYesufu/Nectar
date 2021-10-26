@@ -28,6 +28,9 @@
 		268A58AD2718F51900EB22E5 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A58AC2718F51900EB22E5 /* FavouriteViewController.swift */; };
 		268A58AF2718F52700EB22E5 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A58AE2718F52700EB22E5 /* AccountViewController.swift */; };
 		268A58B12718F5E200EB22E5 /* LandingTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A58B02718F5E200EB22E5 /* LandingTabBarController.swift */; };
+		268A58DA271CE02900EB22E5 /* ShopItemsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A58D9271CE02900EB22E5 /* ShopItemsCollectionViewCell.swift */; };
+		268A58DC271CE2AC00EB22E5 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A58DB271CE2AC00EB22E5 /* Product.swift */; };
+		268A58DE271CEF3200EB22E5 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 268A58DD271CEE9400EB22E5 /* Gilroy-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		268A58AC2718F51900EB22E5 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		268A58AE2718F52700EB22E5 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		268A58B02718F5E200EB22E5 /* LandingTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingTabBarController.swift; sourceTree = "<group>"; };
+		268A58D9271CE02900EB22E5 /* ShopItemsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemsCollectionViewCell.swift; sourceTree = "<group>"; };
+		268A58DB271CE2AC00EB22E5 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		268A58DD271CEE9400EB22E5 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		26466D4D2713920500555418 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				268A58DB271CE2AC00EB22E5 /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -113,6 +120,7 @@
 		26466D4F2713922900555418 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				268A58D8271CDECC00EB22E5 /* Cells */,
 				26466D522713925C00555418 /* Storyboards */,
 				26466D422713905F00555418 /* Assets.xcassets */,
 			);
@@ -161,6 +169,7 @@
 			children = (
 				26466D5727139D2700555418 /* Gilroy-Medium.ttf */,
 				26466D5B2713A75200555418 /* Gilroy-SemiBold.ttf */,
+				268A58DD271CEE9400EB22E5 /* Gilroy-Bold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -198,6 +207,14 @@
 				268A58B02718F5E200EB22E5 /* LandingTabBarController.swift */,
 			);
 			path = LandingController;
+			sourceTree = "<group>";
+		};
+		268A58D8271CDECC00EB22E5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				268A58D9271CE02900EB22E5 /* ShopItemsCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268A58DE271CEF3200EB22E5 /* Gilroy-Bold.ttf in Resources */,
 				26466D462713905F00555418 /* LaunchScreen.storyboard in Resources */,
 				26466D5C2713A75200555418 /* Gilroy-SemiBold.ttf in Resources */,
 				26466D5827139D2700555418 /* Gilroy-Medium.ttf in Resources */,
@@ -272,9 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268A58DC271CE2AC00EB22E5 /* Product.swift in Sources */,
 				268A58B12718F5E200EB22E5 /* LandingTabBarController.swift in Sources */,
 				268A58A32718E2CC00EB22E5 /* SignUpViewController.swift in Sources */,
 				26466D5A2713A4BE00555418 /* Extensions.swift in Sources */,
+				268A58DA271CE02900EB22E5 /* ShopItemsCollectionViewCell.swift in Sources */,
 				268A58AF2718F52700EB22E5 /* AccountViewController.swift in Sources */,
 				268A58AB2718F50100EB22E5 /* CartViewController.swift in Sources */,
 				268A589D27179F5000EB22E5 /* FourDigitCodeViewController.swift in Sources */,

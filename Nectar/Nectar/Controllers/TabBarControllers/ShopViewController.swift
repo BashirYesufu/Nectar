@@ -10,6 +10,9 @@ import UIKit
 class ShopViewController: UIViewController {
     let street: String = "street"
     let city: String = "city"
+    final let identifier = "Cell"
+    
+    var cellItems: [Product] = [Product]()
     
     // MARK: - ScrollView... Creating the logo
     lazy var scrollView: UIScrollView = {
@@ -60,7 +63,7 @@ class ShopViewController: UIViewController {
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.heightAnchor.constraint(equalToConstant: 52).isActive = true
         textField.layer.cornerRadius = 14
-        textField.backgroundColor = AppColors.grey.color
+        textField.backgroundColor = AppColors.searchField.color
         textField.placeholder = "Search Store"
         return textField
     }()
@@ -88,10 +91,28 @@ class ShopViewController: UIViewController {
         return button
     }()
     
+    // MARK: - CollectionView... Creating the Exclusive offer Collection view
+    lazy var exclusiveOfferCollection: UICollectionView = {
+        let layout = UICollectionViewLayout()
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collection.translatesAutoresizingMaskIntoConstraints = false
+        collection.register(ShopItemsCollectionViewCell.self, forCellWithReuseIdentifier: ShopItemsCollectionViewCell.identifier)
+        collection.setCollectionViewLayout(UICollectionViewLayout(), animated: true)
+        collection.backgroundColor = .red
+        collection.frame = view.bounds
+//        collection.delegate = self
+//        collection.dataSource = self
+        return collection
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
         addConstraints()
+        addData()
+    }
+    private func addData() {
+        cellItems.append(Product(image: "Organic Bananas", name: "Organic Bananas", quantity: "7pcs", price: "4.99"))
     }
     
     private func addSubviews() {
@@ -105,6 +126,9 @@ class ShopViewController: UIViewController {
         scrollView.addSubview(advert)
         scrollView.addSubview(exclusiveOffer)
         scrollView.addSubview(seeAllExclusiveOffers)
+        scrollView.addSubview(exclusiveOfferCollection)
+        exclusiveOfferCollection.delegate = self
+        exclusiveOfferCollection.dataSource = self
     }
     
     private func addConstraints() {
@@ -127,8 +151,37 @@ class ShopViewController: UIViewController {
             
             advert.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 5),
             advert.leftAnchor.constraint(equalTo: scrollView.leftAnchor, constant: 20),
-            advert.rightAnchor.constraint(equalTo: scrollView.rightAnchor, constant: -20),
+            advert.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20),
             
+            exclusiveOffer.leftAnchor.constraint(equalTo: scrollView.leftAnchor, constant: 20),
+            exclusiveOffer.topAnchor.constraint(equalTo: advert.bottomAnchor, constant: 20),
+            seeAllExclusiveOffers.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20),
+            seeAllExclusiveOffers.topAnchor.constraint(equalTo: advert.bottomAnchor, constant: 20),
+            
+            exclusiveOfferCollection.topAnchor.constraint(equalTo: exclusiveOffer.bottomAnchor, constant: 10),
+            exclusiveOfferCollection.leftAnchor.constraint(equalTo: scrollView.leftAnchor, constant: 20),
+            exclusiveOfferCollection.rightAnchor.constraint(equalTo: scrollView.rightAnchor, constant: -20),
         ])
+    }
+}
+
+extension ShopViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return cellItems.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShopItemsCollectionViewCell.identifier, for: indexPath) as? ShopItemsCollectionViewCell else { return UICollectionViewCell() }
+        let cellItem = cellItems[indexPath.row]
+        cell.product = cellItem
+        cell.layer.cornerRadius = 14
+        cell.layer.borderWidth = 1
+        cell.layer.borderColor = AppColors.grey.color.cgColor
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 550, height: 250)
     }
 }
