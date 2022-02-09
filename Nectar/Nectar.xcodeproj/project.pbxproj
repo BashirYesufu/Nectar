@@ -73,6 +73,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		044C1E3C27B40F8300AEFEA0 /* Reuseable Components */ = {
+			isa = PBXGroup;
+			children = (
+				26466D542713974B00555418 /* Enumerations.swift */,
+				26466D592713A4BD00555418 /* Extensions.swift */,
+			);
+			path = "Reuseable Components";
+			sourceTree = "<group>";
+		};
 		26466D2D2713905D00555418 = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +104,6 @@
 				26466D502713924100555418 /* Resources */,
 				26466D4D2713920500555418 /* Model */,
 				26466D4F2713922900555418 /* Views */,
-				26466D4E2713921400555418 /* ViewModel */,
 				26466D512713924E00555418 /* Controllers */,
 				26466D472713905F00555418 /* Info.plist */,
 			);
@@ -108,13 +116,6 @@
 				268A58DB271CE2AC00EB22E5 /* Product.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		26466D4E2713921400555418 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		26466D4F2713922900555418 /* Views */ = {
@@ -132,8 +133,7 @@
 			children = (
 				26466D5627139CEA00555418 /* Fonts */,
 				26466D532713928B00555418 /* Delegates */,
-				26466D542713974B00555418 /* Enumerations.swift */,
-				26466D592713A4BD00555418 /* Extensions.swift */,
+				044C1E3C27B40F8300AEFEA0 /* Reuseable Components */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
