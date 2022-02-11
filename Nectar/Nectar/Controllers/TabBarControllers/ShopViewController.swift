@@ -63,6 +63,7 @@ class ShopViewController: UIViewController {
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.heightAnchor.constraint(equalToConstant: 52).isActive = true
         textField.layer.cornerRadius = 14
+        textField.textColor = .black
         textField.backgroundColor = AppColors.searchField.color
         textField.placeholder = "Search Store"
         return textField
